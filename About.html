@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Al-Huda Islamic Learning</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        *
+        
+        /* About Hero Section */
+        .about-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/herosec-01.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+        
+        .about-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        /* About Content Section */
+        .about-content {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .about-section {
+            margin-bottom: 60px;
+        }
+        
+        .about-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #3ec7f3;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .about-section h2::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background-color: #ea5f30;
+            bottom: -10px;
+            left: 0;
+        }
+        
+        .about-section p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        /* Team Section */
+        .team {
+            padding: 60px 0;
+            background-color: #f5f5f5;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 5px solid #3ec7f3;
+        }
+        
+        .team-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .team-member h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+        
+        .team-member p {
+            color: #ea5f30;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        /* Values Section */
+        .values {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .value-card {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .value-card:hover {
+            background-color: #3ec7f3;
+            color: white;
+        }
+        
+        .value-card:hover h3,
+        .value-card:hover p {
+            color: white;
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: #ea5f30;
+            margin-bottom: 20px;
+        }
+        
+        .value-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .value-card p {
+            color: #666;
+        }
+        
+    
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .footer-container,
+            .team-grid,
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .footer-container,
+            .team-grid,
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                     <a href="./Index.html"> <img  src="./images/my_logo-removebg-preview.png" alt="Mosque Icon"></a>
+                    <h1> <a href="./Index.html">Al-<span>Huda</span> </a></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="Index.html">Home</a></li>
+                   <li><a href="./About.html">About Us</a></li>
+                    <li><a href="./Courses.html">Courses</a></li>
+                    <li><a href="./contac.html">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <h1>About Al-Huda Islamic Learning</h1>
+                <p>Discover our mission, values, and the team behind our platform</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content Section -->
+    <section class="about-content">
+        <div class="container">
+            <div class="about-section">
+                <h2>Our Story</h2>
+                <p>Al-Huda Islamic Learning was founded in 2010 with a simple yet profound vision: to make authentic Islamic knowledge accessible to Muslims worldwide. What began as a small local initiative has grown into a comprehensive online platform serving thousands of students across the globe.</p>
+                <p>Our journey started with two passionate teachers and a handful of students. Today, we're proud to have a team of over 50 qualified scholars and educators, offering courses in Quranic studies, Hadith sciences, Fiqh, Arabic language, and more.</p>
+            </div>
+            
+            <div class="about-section">
+                <h2>Our Mission</h2>
+                <p>At Al-Huda, we believe that Islamic education should be authentic, accessible, and transformative. Our mission is to provide high-quality Islamic learning experiences that:</p>
+                <p>- Preserve the traditional Islamic sciences while making them relevant to contemporary life</p>
+                <p>- Empower students to develop a deep, meaningful connection with their faith</p>
+                <p>- Foster a global community of lifelong learners</p>
+                <p>- Bridge the gap between classical Islamic scholarship and modern educational methodologies</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <div class="about-section">
+                <h2>Our Team</h2>
+                <p>Meet the dedicated scholars and professionals who make Al-Huda possible</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="./images/IMG-20250515-WA0009.jpg" alt="Sheikh Abdullah">
+                    </div>
+                    <h3>Ustaadh Hassan Mohamed</h3>
+                    <p>Founder & Director</p>
+                    <p>Graduate of Islamic University of Madinah with 20+ years of teaching experience</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="./images/amina.jpg" alt="Dr. Amina Rahman">
+                    </div>
+                    <h3>Dr. Amina Rahman</h3>
+                    <p>Academic Dean</p>
+                    <p>PhD in Hadith Sciences from Al-Azhar University, Egypt</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="./images//fatham.jpeg" alt="Ustadha Fatima">
+                    </div>
+                    <h3>Ustadha Fatima Ahmed</h3>
+                    <p>Head of Arabic Department</p>
+                    <p>Specialist in teaching Arabic as a second language</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values">
+        <div class="container">
+            <div class="about-section">
+                <h2>Our Core Values</h2>
+                <p>The principles that guide everything we do at Al-Huda</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-quran"></i>
+                    </div>
+                    <h3>Authenticity</h3>
+                    <p>We are committed to teaching Islam as it was understood and practiced by the early generations of Muslims</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Excellence</h3>
+                    <p>We strive for the highest standards in Islamic education and student experience</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Service</h3>
+                    <p>We view teaching as a sacred trust and service to our community</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Accessibility</h3>
+                    <p>We believe authentic Islamic knowledge should be available to all Muslims regardless of location or background</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Compassion</h3>
+                    <p>We approach teaching with patience, kindness, and understanding</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-people-arrows"></i>
+                    </div>
+                    <h3>Community</h3>
+                    <p>We foster connections between students and teachers to build a global learning community</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>About Al-Huda</h3>
+                    <p>Al-Huda Islamic Learning Center is dedicated to providing authentic Islamic knowledge to students worldwide through qualified teachers and comprehensive curriculum.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#teachers">Teachers</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Popular Courses</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Quran with Tajweed</a></li>
+                        <li><a href="#">40 Hadith of Nawawi</a></li>
+                        <li><a href="#">Fiqh of Worship</a></li>
+                        <li><a href="#">Arabic for Beginners</a></li>
+                        <li><a href="#">Prophet's Seerah</a></li>
+                        <li><a href="#">Islamic Creed</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates on new courses and Islamic content.</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Al-Huda Islamic Learning Center. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

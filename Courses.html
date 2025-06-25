@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Al-Huda Islamic Learning</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Global Styles */
+        
+        
+        /* Courses Hero Section */
+        .courses-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/herosec-02.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+        
+        .courses-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .courses-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Courses Filter */
+        .courses-filter {
+            padding: 40px 0;
+            background-color: white;
+        }
+        
+        .filter-options {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .filter-btn {
+            padding: 10px 20px;
+            border-radius: 30px;
+            background-color: #f5f5f5;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #3ec7f3;
+            color: white;
+        }
+        
+        
+        /* Course Categories */
+        .categories-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        
+        .category-card {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .category-card:hover {
+            background-color: #3ec7f3;
+            color: white;
+        }
+        
+        .category-card:hover h3,
+        .category-card:hover p {
+            color: white;
+        }
+        
+        .category-icon {
+            font-size: 2.5rem;
+            color: #ea5f30;
+            margin-bottom: 20px;
+        }
+        
+        .category-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .category-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .courses-grid,
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .courses-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .courses-grid,
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+     <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                     <a href="./Index.html">  <img  src="./images/my_logo-removebg-preview.png" alt="Mosque Icon"></a>
+                    <h1>Al-<span>Huda</span></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="./About.html">About Us</a></li>
+                    <li><a href="Courses.html">Courses</a></li>
+                    <li><a href="./contac.html">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Courses Hero Section -->
+    <section class="courses-hero">
+        <div class="container">
+            <div class="courses-hero-content">
+                <h1>Our Islamic Courses</h1>
+                <p>Explore our comprehensive curriculum designed to deepen your understanding of Islam</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Filter -->
+    <section class="courses-filter">
+        <div class="container">
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">All Courses</button>
+                <button class="filter-btn" data-filter="quran">Quran Studies</button>
+                <button class="filter-btn" data-filter="hadith">Hadith Sciences</button>
+                <button class="filter-btn" data-filter="fiqh">Fiqh</button>
+                <button class="filter-btn" data-filter="arabic">Arabic</button>
+                <button class="filter-btn" data-filter="seerah">Seerah</button>
+            </div>
+        </div>
+    </section>
+
+     <!-- Courses Section -->
+    <section class="courses" id="courses">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Courses</h2>
+                <p>Explore our comprehensive Islamic courses designed for all levels of students</p>
+            </div>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="./images/quran course.jpg" alt="Quran Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>Quran Recitation with Tajweed</h3>
+                        <p>Learn proper pronunciation and recitation rules of the Holy Quran.</p>
+                        <div class="course-meta">
+                            <span><i class="far fa-clock"></i> 3 Months</span>
+                            <span><i class="fas fa-user"></i> Beginner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="./images/40 nawawi.jpg" alt="Hadith Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>40 Hadith of Imam Nawawi</h3>
+                        <p>Study the famous collection of essential Hadith with explanations.</p>
+                        <div class="course-meta">
+                            <span><i class="far fa-clock"></i> 2 Months</span>
+                            <span><i class="fas fa-user"></i> Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="./images/fiqh of worship.jpg" alt="Fiqh Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>Fiqh of Worship</h3>
+                        <p>Learn the rulings of purification, prayer, fasting, zakat and Hajj.</p>
+                        <div class="course-meta">
+                            <span><i class="far fa-clock"></i> 4 Months</span>
+                            <span><i class="fas fa-user"></i> All Levels</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="./images/qacida nurania.png" alt="Arabic Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>Qaida Nurania for Quran Understanding</h3>
+                        <p>Master how to read and write to able reading the Quran directly.</p>
+                        <div class="course-meta">
+                            <span><i class="far fa-clock"></i> 6 Months</span>
+                            <span><i class="fas fa-user"></i> Beginner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Seerah Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>Prophet's Seerah</h3>
+                        <p>Study the life of Prophet Muhammad (PBUH) in chronological order.</p>
+                        <div class="course-meta">
+                            <span><i class="far fa-clock"></i> 3 Months</span>
+                            <span><i class="fas fa-user"></i> All Levels</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="./images/Essential_Islamic_Creed_700x700.webp" alt="Aqeedah Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>Islamic Creed (Aqeedah)</h3>
+                        <p>Learn the fundamentals of Islamic belief based on Quran and Sunnah.</p>
+                        <div class="course-meta">
+                            <span><i class="far fa-clock"></i> 2 Months</span>
+                            <span><i class="fas fa-user"></i> Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Categories -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Course Categories</h2>
+                <p>Explore our comprehensive Islamic learning programs</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-quran"></i>
+                    </div>
+                    <h3>Quran Studies</h3>
+                    <p>Recitation, memorization, and understanding of the Holy Quran</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Hadith Sciences</h3>
+                    <p>Study of authentic Hadith collections and their sciences</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Fiqh</h3>
+                    <p>Islamic jurisprudence according to major schools of thought</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Arabic Language</h3>
+                    <p>Master classical Arabic to understand Islamic texts</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Seerah</h3>
+                    <p>Life and teachings of Prophet Muhammad (PBUH)</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Aqeedah</h3>
+                    <p>Islamic creed and theology</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>Islamic History</h3>
+                    <p>Study of Islamic civilization and heritage</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Tazkiyah</h3>
+                    <p>Spiritual purification and character development</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>About Al-Huda</h3>
+                    <p>Al-Huda Islamic Learning Center is dedicated to providing authentic Islamic knowledge to students worldwide through qualified teachers and comprehensive curriculum.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#teachers">Teachers</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Popular Courses</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Quran with Tajweed</a></li>
+                        <li><a href="#">40 Hadith of Nawawi</a></li>
+                        <li><a href="#">Fiqh of Worship</a></li>
+                        <li><a href="#">Arabic for Beginners</a></li>
+                        <li><a href="#">Prophet's Seerah</a></li>
+                        <li><a href="#">Islamic Creed</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates on new courses and Islamic content.</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Al-Huda Islamic Learning Center. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+   
+</body>
+</html>

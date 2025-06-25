@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Al-Huda Islamic Learning</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles*/
+
+
+         /* Courses Hero Section */
+        .courses-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/herosec-01.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+        
+        .courses-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .courses-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Contact Form Section */
+        .contact-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #3ec7f3;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            font-size: 1.2rem;
+            color: #ea5f30;
+            margin-right: 15px;
+        }
+        
+        .contact-form {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+        }
+
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./Courses.html">
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                  <a href="./Index.html">  <img  src="./images/my_logo-removebg-preview.png" alt="Mosque Icon"></a>
+                    <h1> <a href="./Index.html">Al-<span>Huda</span> </a></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="./Index.html">Home</a></li>
+                    <li><a href="./About.html">About Us</a></li>
+                    <li><a href="./Courses.html">Courses</a></li>
+                    <li><a href="./contac.html">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+ <!-- Courses Hero Section -->
+    <section class="courses-hero">
+        <div class="container">
+            <div class="courses-hero-content">
+                <h1>Our Islamic Courses</h1>
+                <p>Explore our comprehensive curriculum designed to deepen your understanding of Islam</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Contact Content -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p> University Road, Mogadishu-Somalia</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt contact-icon"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+252 613-221-550</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@alhuda-learning.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject">
+                                <option>General Inquiry</option>
+                                <option>Course Information</option>
+                                <option>Technical Support</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>About Al-Huda</h3>
+                    <p>Al-Huda Islamic Learning Center is dedicated to providing authentic Islamic knowledge to students worldwide through qualified teachers and comprehensive curriculum.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#teachers">Teachers</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Popular Courses</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Quran with Tajweed</a></li>
+                        <li><a href="#">40 Hadith of Nawawi</a></li>
+                        <li><a href="#">Fiqh of Worship</a></li>
+                        <li><a href="#">Arabic for Beginners</a></li>
+                        <li><a href="#">Prophet's Seerah</a></li>
+                        <li><a href="#">Islamic Creed</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates on new courses and Islamic content.</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Al-Huda Islamic Learning Center. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
