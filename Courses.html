@@ -34,7 +34,7 @@
         }
         
         /* Courses Filter */
-        .courses-filter {
+        /* .courses-filter {
             padding: 40px 0;
             background-color: white;
         }
@@ -60,7 +60,7 @@
         .filter-btn:hover, .filter-btn.active {
             background-color: #3ec7f3;
             color: white;
-        }
+        } */
         
         
         /* Course Categories */
@@ -110,8 +110,47 @@
             font-size: 0.9rem;
         }
         
-        
-        
+        /* button */
+        /* ======= Auth Buttons ======= */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.signup-btn,
+.login-btn {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.signup-btn {
+  background-color: #ea5f30;
+  color: #fff;
+  border: 2px solid transparent;
+}
+
+.signup-btn:hover {
+  background-color: transparent;
+  color: #ea5f30;
+  border: 2px solid #ea5f30;
+}
+
+.login-btn {
+  background-color: transparent;
+  color: #3ec7f3;
+  border: 2px solid #3ec7f3;
+}
+
+.login-btn:hover {
+  background-color: #3ec7f3;
+  color: white;
+}
+
         /* Responsive Styles */
         @media (max-width: 992px) {
             .courses-grid,
@@ -166,6 +205,13 @@
                     <li><a href="Courses.html">Courses</a></li>
                     <li><a href="./contac.html">Contact</a></li>
                 </ul>
+
+<!-- butons -->
+                     <!-- ✅ AUTH BUTTONS -->
+  <div class="auth-buttons">
+    <a href="./signup.html" class="signup-btn">Sign Up</a>
+    <a href="./login.html" class="login-btn">Log In</a>
+  </div>
                 <div class="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -185,7 +231,7 @@
         </div>
     </section>
 
-    <!-- Courses Filter -->
+    <!-- Courses Filter
     <section class="courses-filter">
         <div class="container">
             <div class="filter-options">
@@ -197,7 +243,7 @@
                 <button class="filter-btn" data-filter="seerah">Seerah</button>
             </div>
         </div>
-    </section>
+    </section> -->
 
      <!-- Courses Section -->
     <section class="courses" id="courses">

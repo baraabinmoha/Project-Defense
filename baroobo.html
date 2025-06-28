@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Header Styles */
+header {
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  height: 42px;
+  transition: transform 0.3s ease;
+}
+.logo img:hover {
+  transform: rotate(-10deg) scale(1.05);
+}
+
+.logo h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+}
+.logo h1 span {
+  color: #ea5f30;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #ea5f30;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-links li a:hover {
+  color: #ea5f30;
+}
+
+/* Mobile menu icon */
+.mobile-menu-btn {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* buttons */
+   
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            border: none;
+            outline: none;
+        }
+        
+        .btn-login {
+            background-color: transparent;
+            color: #2a4365;
+            border: 1px solid #2a4365;
+        }
+        
+        .btn-login:hover {
+            background-color: #f0f4f8;
+        }
+        
+        .btn-signup {
+            background-color: #2a4365;
+            color: white;
+            box-shadow: 0 2px 5px rgba(42, 67, 101, 0.2);
+        }
+        
+        .btn-signup:hover {
+            background-color: #1e3a8a;
+            transform: translateY(-1px);
+        }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
+    </style>
+</head>
+<body>
+    
+<!-- Header -->
+<header>
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./images/my_logo-removebg-preview.png" alt="Mosque Icon">
+        </a>
+        <h1><a href="./index.html">Al-<span>Huda</span></a></h1>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./About.html">About Us</a></li>
+        <li><a href="./Courses.html">Courses</a></li>
+        <li><a href="./contac.html">Contact</a></li>
+      </ul>
+
+      <div class="mobile-menu-btn" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+ <div class="auth-buttons">
+            <button class="btn btn-login">Log In</button>
+            <button class="btn btn-signup">Sign Up</button>
+        </div>
+      <i class="fas fa-bars"></i>
+    </div>
+
+
+    </nav>
+  </div>
+</header>
+
+
+</body>
+</html>
