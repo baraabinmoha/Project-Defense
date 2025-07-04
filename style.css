@@ -663,6 +663,9 @@
             .mobile-menu-btn {
                 display: block;
             }
+            .auth-buttons{
+                display: none;
+            }
             
             .hero h1 {
                 font-size: 2.5rem;
